@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:30:39 by yena              #+#    #+#             */
-/*   Updated: 2023/06/19 00:35:15 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/19 06:50:12 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,13 @@ std::string Dog::getIdea(int idx) const {
 
 void Dog::setIdea(int idx, std::string idea) {
   this->brain->setIdea(idx, idea);
+}
+
+/**
+ * @brief Pure virtual function
+ * @details This function is pure virtual function.
+ * @override Animal::pure_virtual_function
+ */
+void Dog::pure_virtual_function(void) const {
+  std::cout << "Dog pure virtual function called" << std::endl;
 }

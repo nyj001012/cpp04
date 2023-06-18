@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:25:27 by yena              #+#    #+#             */
-/*   Updated: 2023/06/19 00:33:50 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/19 06:50:39 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,13 @@ std::string Cat::getIdea(int idx) const {
 
 void Cat::setIdea(int idx, std::string idea) {
   this->brain->setIdea(idx, idea);
+}
+
+/**
+ * @brief Pure virtual function
+ * @details This function is pure virtual function.
+ * @override Animal::pure_virtual_function
+ */
+void Cat::pure_virtual_function(void) const {
+  std::cout << "Cat pure virtual function called" << std::endl;
 }
