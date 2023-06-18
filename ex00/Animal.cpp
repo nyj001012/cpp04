@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:03:10 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:06:37 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/18 23:24:55 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,8 @@ Animal &Animal::operator=(const Animal &other) {
 
 Animal::~Animal(void) {
   std::cout << "Animal Destructor called" << std::endl;
+}
+
+void Animal::makeSound(void) const {
+  std::cout << "Animal makes no sound" << std::endl;
 }
