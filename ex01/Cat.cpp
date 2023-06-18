@@ -6,13 +6,13 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:25:27 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:56:51 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/19 00:33:50 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) {
+Cat::Cat(void) : Animal() {
   std::cout << "Cat Constructor called" << std::endl;
   this->type = "Cat";
   brain = new Brain();
@@ -40,4 +40,12 @@ Cat::~Cat(void) {
  */
 void Cat::makeSound(void) const {
   std::cout << "Cat meows" << std::endl;
+}
+
+std::string Cat::getIdea(int idx) const {
+  return (this->brain->getIdea(idx));
+}
+
+void Cat::setIdea(int idx, std::string idea) {
+  this->brain->setIdea(idx, idea);
 }

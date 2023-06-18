@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:30:39 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:55:59 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/19 00:35:15 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,12 @@ Dog::~Dog(void) {
  */
 void Dog::makeSound(void) const {
   std::cout << "Dog barks" << std::endl;
+}
+
+std::string Dog::getIdea(int idx) const {
+  return (this->brain->getIdea(idx));
+}
+
+void Dog::setIdea(int idx, std::string idea) {
+  this->brain->setIdea(idx, idea);
 }
