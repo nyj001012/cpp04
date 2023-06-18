@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:30:39 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:32:13 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/18 23:55:59 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Dog::Dog(void) : Animal() {
   std::cout << "Dog Constructor called" << std::endl;
   this->type = "Dog";
+  brain = new Brain();
 }
 
 Dog::Dog(const Dog &other) {
@@ -30,6 +31,7 @@ Dog &Dog::operator=(const Dog &other) {
 
 Dog::~Dog(void) {
   std::cout << "Dog Destructor called" << std::endl;
+  delete brain;
 }
 
 /**

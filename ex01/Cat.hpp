@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:25:27 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:39:07 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/18 23:57:42 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 
 # include <iostream>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 /**
  * @brief Cat class
  * @details Cat class is a derived class of Animal class.
- * It has a type member variable and makeSound member function.
+ * It has a type, brain member variable and makeSound member function.
  */
 class Cat : public Animal {
+ private:
+  Brain *brain;
+
  public:
   Cat(void);
   Cat(const Cat &other);

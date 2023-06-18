@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:30:39 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:39:22 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/18 23:57:34 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 
 # include <iostream>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 /**
  * @brief Dog class
  * @details Dog class is a derived class of Animal class.
- * It has a type member variable and makeSound member function.
+ * It has a type, brain member variable and makeSound member function.
  */
 class Dog : public Animal {
+ private:
+  Brain *brain;
+
  public:
   Dog(void);
   Dog(const Dog &other);
