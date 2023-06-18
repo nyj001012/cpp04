@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:03:10 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:23:47 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/18 23:26:04 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <iostream>
 
+/**
+ * @brief Animal class
+ * @details Animal class is a base class of Cat and Dog class.
+ * It has a type member variable and makeSound member function.
+ */
 class Animal {
  protected:
   std::string type;
