@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:03:10 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:24:55 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/18 23:38:39 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ Animal::~Animal(void) {
   std::cout << "Animal Destructor called" << std::endl;
 }
 
+/**
+ * @brief Make sound of Animal
+ */
 void Animal::makeSound(void) const {
   std::cout << "Animal makes no sound" << std::endl;
+}
+
+std::string Animal::getType(void) const {
+  return (this->type);
 }

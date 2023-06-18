@@ -6,11 +6,15 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:07:56 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:24:05 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/18 23:37:51 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main(void) {
   const Animal *meta = new Animal();
