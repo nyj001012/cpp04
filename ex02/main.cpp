@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
@@ -21,8 +22,8 @@
 void basicTest(void) {
   std::cout << "\033[0;32mBasic Test\033[0m" << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
-  const Animal *j = new Dog();
-  const Animal *i = new Cat();
+  const AAnimal *j = new Dog();
+  const AAnimal *i = new Cat();
   std::cout << std::endl;
   std::cout << "===================== Destructor ======================" << std::endl;
   delete j;
@@ -33,12 +34,12 @@ void basicTest(void) {
 /**
  * @brief Create farm
  * @details This function creates farm
- * @return Animal** farm
+ * @return AAnimal** farm
  */
-Animal **createFarm(void) {
+AAnimal **createFarm(void) {
   std::cout << "\033[0;32mCreate Test\033[0m" << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
-  Animal **farm = new Animal *[10];
+  AAnimal **farm = new AAnimal *[10];
   for (int i = 0; i < 5; i++) {
     farm[i] = new Cat();
     Cat *cat = static_cast<Cat *>(farm[i]);
@@ -55,9 +56,9 @@ Animal **createFarm(void) {
 
 /**
  * @brief Make sound and Brain test
- * @param Animal *farm[10]
+ * @param AAnimal *farm[10]
  */
-void functionTest(Animal *farm[10]) {
+void functionTest(AAnimal *farm[10]) {
   std::cout << "\033[0;32mMakeSound & Brain Test\033[0m" << std::endl;
   std::cout << "====================== MakeSound ======================" << std::endl;
   for (int i = 0; i < 10; i++) {
@@ -83,7 +84,7 @@ void functionTest(Animal *farm[10]) {
  * @param farm
  */
 
-void destroyFarm(Animal *farm[10]) {
+void destroyFarm(AAnimal *farm[10]) {
   std::cout << "\033[0;32mEnd of Test\033[0m" << std::endl;
   std::cout << "===================== Destructor ======================" << std::endl;
   for (int i = 0; i < 10; i++) {
@@ -95,7 +96,7 @@ void destroyFarm(Animal *farm[10]) {
 
 int main(void) {
   basicTest();
-  Animal **farm = createFarm();
+  AAnimal **farm = createFarm();
   functionTest(farm);
   destroyFarm(farm);
   return (0);

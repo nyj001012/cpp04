@@ -14,7 +14,7 @@
 #define CPP04_EX00_CAT_HPP_
 
 # include <iostream>
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
 /**
@@ -22,7 +22,7 @@
  * @details Cat class is a derived class of Animal class.
  * It has a type, brain member variable and makeSound member function.
  */
-class Cat : public Animal {
+class Cat : public AAnimal {
  private:
   Brain *brain;
 

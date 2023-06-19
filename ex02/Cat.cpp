@@ -12,7 +12,7 @@
 
 #include "Cat.hpp"
 
-Cat::Cat(void) : Animal() {
+Cat::Cat(void) : AAnimal() {
   std::cout << "Cat Constructor called" << std::endl;
   this->type = "Cat";
   brain = new Brain();
@@ -53,7 +53,7 @@ void Cat::setIdea(int idx, std::string idea) {
 /**
  * @brief Pure virtual function
  * @details This function is pure virtual function.
- * @override Animal::pure_virtual_function
+ * @override AAnimal::pure_virtual_function
  */
 void Cat::pure_virtual_function(void) const {
   std::cout << "Cat pure virtual function called" << std::endl;

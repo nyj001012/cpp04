@@ -5,7 +5,8 @@ SRCS = main.cpp \
 	   Dog.cpp \
 	   WrongAnimal.cpp \
 	   WrongCat.cpp \
-	   Brain.cpp
+	   Brain.cpp \
+	   AAnimal.cpp
 OBJS = ${SRCS:.cpp=.o}
 
 CC = clang++

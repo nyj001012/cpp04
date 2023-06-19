@@ -14,15 +14,15 @@
 #define CPP04_EX00_DOG_HPP_
 
 # include <iostream>
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
 /**
  * @brief Dog class
- * @details Dog class is a derived class of Animal class.
+ * @details Dog class is a derived class of AAnimal class.
  * It has a type, brain member variable and makeSound member function.
  */
-class Dog : public Animal {
+class Dog : public AAnimal {
  private:
   Brain *brain;
 
