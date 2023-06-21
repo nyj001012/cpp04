@@ -13,26 +13,26 @@
 #include "Ice.hpp"
 
 Ice::Ice(void) {
-  std::cout << F_CYAN << "[ Ice ]" << FB_DEFAULT
+  std::cout << F_CYAN << "[ Ice ] " << FB_DEFAULT
             << "Ice Constructor called" << std::endl;
   this->_type = "ice";
 }
 
 Ice::Ice(const Ice &other) {
-  std::cout << F_CYAN << "[ Ice ]" << FB_DEFAULT
+  std::cout << F_CYAN << "[ Ice ] " << FB_DEFAULT
             << "Ice Copy Constructor called" << std::endl;
   if (this != &other)
     *this = other;
 }
 
 Ice &Ice::operator=(const Ice &other) {
-  std::cout << F_CYAN << "[ Ice ]" << FB_DEFAULT
+  std::cout << F_CYAN << "[ Ice ] " << FB_DEFAULT
             << "Ice Assignation Operator called" << std::endl;
   return (*this);
 }
 
 Ice::~Ice(void) {
-  std::cout << F_CYAN << "[ Ice ]" << FB_DEFAULT
+  std::cout << F_CYAN << "[ Ice ] " << FB_DEFAULT
             << "Ice Destructor called" << std::endl;
 }
 
@@ -50,7 +50,7 @@ void Ice::use(int &target) {
  * @return
  */
 AMateria *Ice::clone(void) const {
-  std::cout << F_CYAN << "[ Ice ]" << FB_DEFAULT
+  std::cout << F_CYAN << "[ Ice ] " << FB_DEFAULT
             << "Ice clone called" << std::endl;
   return (new Ice());
 }

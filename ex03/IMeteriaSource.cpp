@@ -13,25 +13,25 @@
 #include "IMateriaSource.hpp"
 
 IMateriaSource::IMateriaSource(void) {
-  std::cout << F_GREEN << "[ IMateriaSource ]" << FB_DEFAULT
+  std::cout << F_GREEN << "[ IMateriaSource ] " << FB_DEFAULT
             << "IMateriaSource Constructor called" << std::endl;
 }
 
 IMateriaSource::IMateriaSource(const IMateriaSource &other) {
-  std::cout << F_GREEN << "[ IMateriaSource ]" << FB_DEFAULT
+  std::cout << F_GREEN << "[ IMateriaSource ] " << FB_DEFAULT
             << "IMateriaSource Copy Constructor called" << std::endl;
   if (this != &other)
     *this = other;
 }
 
 IMateriaSource &IMateriaSource::operator=(const IMateriaSource &other) {
-  std::cout << F_GREEN << "[ IMateriaSource ]" << FB_DEFAULT
+  std::cout << F_GREEN << "[ IMateriaSource ] " << FB_DEFAULT
             << "IMateriaSource Assignation Operator called" << std::endl;
   return (*this);
 }
 
 ~IMateriaSource(void) {
-  std::cout << F_GREEN << "[ IMateriaSource ]" << FB_DEFAULT
+  std::cout << F_GREEN << "[ IMateriaSource ] " << FB_DEFAULT
             << "IMateriaSource Destructor called" << std::endl;
 }
 
@@ -40,7 +40,7 @@ IMateriaSource &IMateriaSource::operator=(const IMateriaSource &other) {
  * @param materia
  */
 void IMateriaSource::learnMateria(AMateria *materia) {
-  std::cout << F_GREEN << "[ IMateriaSource ]" << FB_DEFAULT
+  std::cout << F_GREEN << "[ IMateriaSource ] " << FB_DEFAULT
             << "IMateriaSource learnMateria called" << std::endl;
   int i = 0;
   while (this->_materia[i] != NULL)
@@ -54,7 +54,7 @@ void IMateriaSource::learnMateria(AMateria *materia) {
  * @return AMateria*
  */
 AMateria *IMateriaSource::createMateria(std::string const &type) {
-  std::cout << F_GREEN << "[ IMateriaSource ]" << FB_DEFAULT
+  std::cout << F_GREEN << "[ IMateriaSource ] " << FB_DEFAULT
             << "IMateriaSource createMateria called" << std::endl;
   int i = 0;
   while (this->_materia[i] != NULL) {

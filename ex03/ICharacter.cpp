@@ -13,25 +13,25 @@
 #include "ICharacter.hpp"
 
 ICharacter::ICharacter(void) {
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter Constructor called" << std::endl;
 }
 
 ICharacter::ICharacter(const ICharacter &other) {
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter Copy Constructor called" << std::endl;
   if (this != &other)
     *this = other;
 }
 
 ICharacter &ICharacter::operator=(const ICharacter &other) {
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter Assignation Operator called" << std::endl;
   return (*this);
 }
 
 ICharacter::~ICharacter(void) {
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter Destructor called" << std::endl;
 }
 
@@ -40,7 +40,7 @@ ICharacter::~ICharacter(void) {
  * @return std::string
  */
 std::string const &ICharacter::getName(void) const {
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter getName called" << std::endl;
   return (this->_name);
 }
@@ -50,7 +50,7 @@ std::string const &ICharacter::getName(void) const {
  * @param materia
  */
 void ICharacter::equip(AMateria *materia) {
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter equip called" << std::endl;
   for (int i = 0; i < SLOT_MAX; i++) {
     if (this->_materia[i] == NULL) {
@@ -58,7 +58,7 @@ void ICharacter::equip(AMateria *materia) {
       return ;
     }
   }
-  std::cout << F_RED << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_RED << "[ ICharacter ] " << FB_DEFAULT
             << "Your inventory is full!" << std::endl;
 }
 
@@ -68,11 +68,11 @@ void ICharacter::equip(AMateria *materia) {
  */
 void ICharacter::unequip(int idx) {
   if (this->_mataria[idx] == NULL) {
-    std::cout << F_RED << "[ ICharacter ]" << FB_DEFAULT
+    std::cout << F_RED << "[ ICharacter ] " << FB_DEFAULT
               << "The inventory slot is empty!" << std::endl;
     return ;
   }
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter unequip called" << std::endl;
   this->_materia[idx] = NULL;
 }
@@ -84,11 +84,11 @@ void ICharacter::unequip(int idx) {
  */
 void ICharacter::use(int idx, ICharacter &target) {
   if (this->_mataria[idx] == NULL) {
-    std::cout << F_RED << "[ ICharacter ]" << FB_DEFAULT
+    std::cout << F_RED << "[ ICharacter ] " << FB_DEFAULT
               << "You can not use nothing!" << std::endl;
     return ;
   }
-  std::cout << F_YELLOW << "[ ICharacter ]" << FB_DEFAULT
+  std::cout << F_YELLOW << "[ ICharacter ] " << FB_DEFAULT
             << "ICharacter use called" << std::endl;
   this->_materia[idx]->use(target);
 }
