@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:59:23 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 21:18:57 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 21:44:10 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
  */
 class Character : public ICharacter {
  private:
-  std::string name;
-  AMateria *inventory[4];
-  int count;
+  std::string _name;
+  AMateria *_inventory[4];
+
  public:
   Character(void);
   Character(const std::string &name);

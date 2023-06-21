@@ -6,13 +6,13 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:09:32 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 20:53:51 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 21:56:17 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(void) : {
+Cure::Cure(void) {
   std::cout << F_MAGENTA << "[ Cure ] " << FB_DEFAULT
             << "Cure Constructor called" << std::endl;
   this->_type = "cure";
@@ -28,6 +28,7 @@ Cure::Cure(const Cure &other) {
 Cure &Cure::operator=(const Cure &other) {
   std::cout << F_MAGENTA << "[ Cure ] " << FB_DEFAULT
             << "Cure Assignation Operator called" << std::endl;
+  this->_type = other._type;
   return (*this);
 }
 
@@ -40,9 +41,9 @@ Cure::~Cure(void) {
  * @brief Use cure
  * @param target
  */
-void Cure::use(int &target) {
-    std::cout << F_MAGENTA << "* heals "
-              << target << "'s wounds *" << FB_DEFAULT << std::endl;
+void Cure::use(ICharacter &target) {
+  std::cout << F_MAGENTA << "* heals "
+            << target.getName() << "'s wounds *" << FB_DEFAULT << std::endl;
 }
 
 /**

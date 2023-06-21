@@ -6,9 +6,14 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:15:06 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 20:15:43 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 21:47:25 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "MateriaSource.hpp"
+#include "Character.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main(void) {
   IMateriaSource *src = new MateriaSource();

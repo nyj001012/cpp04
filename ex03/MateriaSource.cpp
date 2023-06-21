@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:14:35 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 21:21:07 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 21:58:34 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,15 @@ MateriaSource::MateriaSource(const MateriaSource &other) {
 MateriaSource &MateriaSource::operator=(const MateriaSource &other) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
             << "MateriaSource Assignation Operator called" << std::endl;
+  for (int i = 0; i < 4; i++) {
+    if (this->_materia[i] != NULL)
+      delete this->_materia[i];
+    this->_materia[i] = other._materia[i]->clone();
+  }
   return (*this);
 }
 
-~MateriaSource(void) {
+MateriaSource::~MateriaSource(void) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
             << "MateriaSource Destructor called" << std::endl;
 }

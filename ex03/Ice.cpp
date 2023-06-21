@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:08:08 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 20:52:12 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 21:57:00 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Ice::Ice(const Ice &other) {
 Ice &Ice::operator=(const Ice &other) {
   std::cout << F_CYAN << "[ Ice ] " << FB_DEFAULT
             << "Ice Assignation Operator called" << std::endl;
+  this->_type = other._type;
   return (*this);
 }
 
@@ -40,9 +41,9 @@ Ice::~Ice(void) {
  * @brief Use ice
  * @param target
  */
-void Ice::use(int &target) {
+void Ice::use(ICharacter &target) {
     std::cout << F_CYAN << "* shoots an ice bolt at "
-              << target << " *" << FB_DEFAULT << std::endl;
+              << target.getName() << " *" << FB_DEFAULT << std::endl;
 }
 
 /**
