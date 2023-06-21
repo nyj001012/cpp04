@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:04:51 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 20:05:58 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 20:44:02 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  */
 class AMateria {
  protected:
-  std::string type;
+  std::string _type;
 
  public:
   AMateria(std::string const &type);
