@@ -6,12 +6,16 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:08:08 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 20:10:43 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 20:43:36 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CPP04_EX03_ICE_HPP_
 #define CPP04_EX03_ICE_HPP_
+
+# include <iostream>
+# include "AMateria.hpp"
+# include "font.hpp"
 
 /**
  * @brief Ice class
