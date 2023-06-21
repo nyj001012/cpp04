@@ -6,10 +6,11 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:07:56 by yena              #+#    #+#             */
-/*   Updated: 2023/06/19 07:02:47 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/21 20:02:31 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "font.hpp"
 #include "Animal.hpp"
 #include "AAnimal.hpp"
 #include "Dog.hpp"
@@ -20,7 +21,7 @@
  * @details This test is for checking basic constructor, destructor
  */
 void basicTest(void) {
-  std::cout << "\033[0;32mBasic Test\033[0m" << std::endl;
+  std::cout << F_GREEN << "Basic Test" << FB_DEFAULT << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
   const AAnimal *j = new Dog();
   const AAnimal *i = new Cat();
@@ -37,7 +38,7 @@ void basicTest(void) {
  * @return AAnimal** farm
  */
 AAnimal **createFarm(void) {
-  std::cout << "\033[0;32mCreate Test\033[0m" << std::endl;
+  std::cout << F_GREEN << "Create Test" << FB_DEFAULT << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
   AAnimal **farm = new AAnimal *[10];
   for (int i = 0; i < 5; i++) {
@@ -59,7 +60,7 @@ AAnimal **createFarm(void) {
  * @param AAnimal *farm[10]
  */
 void functionTest(AAnimal *farm[10]) {
-  std::cout << "\033[0;32mMakeSound & Brain Test\033[0m" << std::endl;
+  std::cout << F_GREEN << "MakeSound & Brain Test" << FB_DEFAULT << std::endl;
   std::cout << "====================== MakeSound ======================" << std::endl;
   for (int i = 0; i < 10; i++) {
     farm[i]->makeSound();
@@ -85,7 +86,7 @@ void functionTest(AAnimal *farm[10]) {
  */
 
 void destroyFarm(AAnimal *farm[10]) {
-  std::cout << "\033[0;32mEnd of Test\033[0m" << std::endl;
+  std::cout << F_GREEN << "End of Test" << FB_DEFAULT << std::endl;
   std::cout << "===================== Destructor ======================" << std::endl;
   for (int i = 0; i < 10; i++) {
     delete farm[i];
