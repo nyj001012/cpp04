@@ -13,31 +13,37 @@
 #include "AAnimal.hpp"
 
 AAnimal::AAnimal(void) {
-  std::cout << "AAnimal Constructor called" << std::endl;
+  std::cout << F_YELLOW << "[ Animal ] " << FB_DEFAULT
+            << "AAnimal Constructor called" << std::endl;
 }
 
 AAnimal::AAnimal(const AAnimal &other) {
-  std::cout << "AAnimal Copy Constructor called" << std::endl;
-  *this = other;
+  std::cout << F_YELLOW << "[ Animal ] " << FB_DEFAULT
+            << "AAnimal Copy Constructor called" << std::endl;
+  if (this != &other)
+    *this = other;
 }
 
 AAnimal &AAnimal::operator=(const AAnimal &other) {
-  std::cout << "AAnimal Assignation Operator called" << std::endl;
-  this->type = other.type;
+  std::cout << F_YELLOW << "[ Animal ] " << FB_DEFAULT
+            << "AAnimal Assignation Operator called" << std::endl;
+  this->_type = other._type;
   return (*this);
 }
 
 AAnimal::~AAnimal(void) {
-  std::cout << "AAnimal Destructor called" << std::endl;
+  std::cout << F_YELLOW << "[ Animal ] " << FB_DEFAULT
+            << "AAnimal Destructor called" << std::endl;
 }
 
 /**
  * @brief Make sound of AAnimal
  */
 void AAnimal::makeSound(void) const {
-  std::cout << "AAnimal makes no sound" << std::endl;
+  std::cout << F_YELLOW << "[ Animal ] " << FB_DEFAULT
+            << "AAnimal makes no sound" << std::endl;
 }
 
 std::string AAnimal::getType(void) const {
-  return (this->type);
+  return (this->_type);
 }

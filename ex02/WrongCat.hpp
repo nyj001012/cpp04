@@ -16,6 +16,11 @@
 # include <iostream>
 # include "WrongAnimal.hpp"
 
+/**
+ * @brief WrongCat class.
+ * @details WrongCat class is a derived class of WrongAnimal class.
+ * It has a type, brain member variable and makeSound member function.
+ */
 class WrongCat : public WrongAnimal {
  public:
   WrongCat(void);

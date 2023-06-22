@@ -14,7 +14,11 @@
 #define CPP04_EX01_BRAIN_HPP_
 
 # include <iostream>
+# include "font.hpp"
 
+/**
+ * @brief Brain class
+ */
 class Brain {
  private:
   std::string ideas[100];

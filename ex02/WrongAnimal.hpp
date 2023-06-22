@@ -14,6 +14,7 @@
 #define CPP04_EX00_WRONGANIMAL_HPP_
 
 # include <iostream>
+# include "font.hpp"
 
 /**
  * @brief WrongAnimal class
@@ -21,7 +22,7 @@
  */
 class WrongAnimal {
  protected:
-  std::string type;
+  std::string _type;
 
  public:
   WrongAnimal(void);

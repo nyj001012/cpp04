@@ -13,27 +13,33 @@
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat(void) {
-  std::cout << "WrongCat Constructor called" << std::endl;
+  std::cout << F_MAGENTA << "[ WrongCat ] " << FB_DEFAULT
+            << "WrongCat Constructor called" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &other) {
-  std::cout << "WrongCat Copy Constructor called" << std::endl;
-  *this = other;
+  std::cout << F_MAGENTA << "[ WrongCat ] " << FB_DEFAULT
+            << "WrongCat Copy Constructor called" << std::endl;
+  if (this != &other)
+    *this = other;
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &other) {
-  std::cout << "WrongCat Assignation Operator called" << std::endl;
-  this->type = other.type;
+  std::cout << F_MAGENTA << "[ WrongCat ] " << FB_DEFAULT
+            << "WrongCat Assignation Operator called" << std::endl;
+  this->_type = other._type;
   return (*this);
 }
 
 WrongCat::~WrongCat(void) {
-  std::cout << "WrongCat Destructor called" << std::endl;
+  std::cout << F_MAGENTA << "[ WrongCat ] " << FB_DEFAULT
+            << "WrongCat Destructor called" << std::endl;
 }
 
 /**
  * @brief Make sound of WrongCat
  */
 void WrongCat::makeSound(void) const {
-  std::cout << "WrongCat meows" << std::endl;
+  std::cout << F_MAGENTA << "[ WrongCat ] " << FB_DEFAULT
+            << "WrongCat meows" << std::endl;
 }

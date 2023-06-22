@@ -13,36 +13,42 @@
 #include "Dog.hpp"
 
 Dog::Dog(void) : AAnimal() {
-  std::cout << "Dog Constructor called" << std::endl;
-  this->type = "Dog";
-  brain = new Brain();
+  std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
+            << "Dog Constructor called" << std::endl;
+  this->_type = "Dog";
+  this->_brain = new Brain();
 }
 
 Dog::Dog(const Dog &other) {
-  std::cout << "Dog Copy Constructor called" << std::endl;
-  *this = other;
+  std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
+            << "Dog Copy Constructor called" << std::endl;
+  if (this != &other)
+    *this = other;
 }
 
 Dog &Dog::operator=(const Dog &other) {
-  std::cout << "Dog Assignation Operator called" << std::endl;
-  this->type = other.type;
+  std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
+            << "Dog Assignation Operator called" << std::endl;
+  this->_type = other._type;
   return (*this);
 }
 
 Dog::~Dog(void) {
   delete _brain;
-  std::cout << "Dog Destructor called" << std::endl;
+  std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
+            << "Dog Destructor called" << std::endl;
 }
 
 /**
  * @brief Make sound of Dog
  */
 void Dog::makeSound(void) const {
-  std::cout << "Dog barks" << std::endl;
+  std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
+            << "Dog barks" << std::endl;
 }
 
 std::string Dog::getType(void) const {
-  return (this->type);
+  return (this->_type);
 }
 
 std::string Dog::getIdea(int idx) const {
