@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:25:27 by yena              #+#    #+#             */
-/*   Updated: 2023/06/19 06:50:27 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:26:40 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ class Cat : public AAnimal {
   Cat &operator=(const Cat &other);
   ~Cat(void);
   void makeSound(void) const;
+  std::string getType(void) const;
   std::string getIdea(int idx) const;
   void setIdea(int idx, std::string idea);
-  void pure_virtual_function(void) const;
 };
 
 #endif //CPP04_EX00_CAT_HPP_

@@ -1,6 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/21 12:23:45 by yena              #+#    #+#             */
+/*   Updated: 2023/06/22 13:11:35 by yena             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
 /*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
@@ -29,10 +41,9 @@ class AAnimal {
   AAnimal(void);
   AAnimal(const AAnimal &other);
   AAnimal &operator=(const AAnimal &other);
-  virtual ~AAnimal(void);
-  virtual void makeSound(void) const;
-  std::string getType(void) const;
-  virtual void pure_virtual_function(void) const = 0;
+  virtual ~AAnimal(void) = 0;
+  virtual void makeSound(void) const = 0;
+  virtual std::string getType(void) const = 0;
 };
 
 #endif //CPP04_AAnimal_HPP

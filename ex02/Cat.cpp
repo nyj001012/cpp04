@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:25:27 by yena              #+#    #+#             */
-/*   Updated: 2023/06/19 06:50:39 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:26:27 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,14 @@ void Cat::makeSound(void) const {
   std::cout << "Cat meows" << std::endl;
 }
 
+std::string Cat::getType() const {
+  return (this->type);
+}
+
 std::string Cat::getIdea(int idx) const {
   return (this->brain->getIdea(idx));
 }
 
 void Cat::setIdea(int idx, std::string idea) {
   this->brain->setIdea(idx, idea);
-}
-
-/**
- * @brief Pure virtual function
- * @details This function is pure virtual function.
- * @override AAnimal::pure_virtual_function
- */
-void Cat::pure_virtual_function(void) const {
-  std::cout << "Cat pure virtual function called" << std::endl;
 }

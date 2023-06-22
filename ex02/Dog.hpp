@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:30:39 by yena              #+#    #+#             */
-/*   Updated: 2023/06/19 06:49:10 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:24:43 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ class Dog : public AAnimal {
   Dog &operator=(const Dog &other);
   ~Dog(void);
   void makeSound(void) const;
+  std::string getType(void) const;
   std::string getIdea(int idx) const;
   void setIdea(int idx, std::string idea);
-  void pure_virtual_function(void) const;
 };
 
 #endif //CPP04_EX00_DOG_HPP_

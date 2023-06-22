@@ -6,12 +6,11 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:07:56 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 20:02:31 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:31:37 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "font.hpp"
-#include "Animal.hpp"
 #include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -23,24 +22,24 @@
 void basicTest(void) {
   std::cout << F_GREEN << "Basic Test" << FB_DEFAULT << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
-  const AAnimal *j = new Dog();
-  const AAnimal *i = new Cat();
+  // Abstract class can't be instantiated
+//  const AAnimal *j = new Dog();
+//  const AAnimal *i = new Cat();
   std::cout << std::endl;
   std::cout << "===================== Destructor ======================" << std::endl;
-  delete j;
-  delete i;
+//  delete j;
+//  delete i;
   std::cout << std::endl;
 }
 
 /**
  * @brief Create farm
  * @details This function creates farm
- * @return AAnimal** farm
+ * @param AAnimal **farm
  */
-AAnimal **createFarm(void) {
+void createFarm(AAnimal **farm) {
   std::cout << F_GREEN << "Create Test" << FB_DEFAULT << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
-  AAnimal **farm = new AAnimal *[10];
   for (int i = 0; i < 5; i++) {
     farm[i] = new Cat();
     Cat *cat = static_cast<Cat *>(farm[i]);
@@ -52,7 +51,6 @@ AAnimal **createFarm(void) {
     dog->setIdea(i, "I want a bone!");
   }
   std::cout << std::endl;
-  return (farm);
 }
 
 /**
@@ -91,13 +89,13 @@ void destroyFarm(AAnimal *farm[10]) {
   for (int i = 0; i < 10; i++) {
     delete farm[i];
   }
-  delete[] farm;
   std::cout << std::endl;
 }
 
 int main(void) {
   basicTest();
-  AAnimal **farm = createFarm();
+  AAnimal *(farm[10]);
+  createFarm(farm);
   functionTest(farm);
   destroyFarm(farm);
   return (0);
