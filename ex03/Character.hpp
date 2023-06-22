@@ -17,7 +17,8 @@
 
 /**
  * @brief Character class
- * @details This class is a derived class from ICharacter class.
+ * @details This class is a derived class from ICharacter interface.
+ * It implements all functions defined in ICharacter.
  */
 class Character : public ICharacter {
  private:

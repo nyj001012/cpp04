@@ -18,6 +18,11 @@
 # include "AMateria.hpp"
 # include "font.hpp"
 
+/**
+ * @brief MeteriaSource class.
+ * @details This class is a derived class from IMateriaSource interface.
+ * It implements all functions defined in IMateriaSource.
+ */
 class MateriaSource : public IMateriaSource {
  private:
   AMateria *_materia[4];

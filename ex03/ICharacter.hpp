@@ -20,6 +20,10 @@
 
 class AMateria;
 
+/**
+ * @brief Character interface.
+ * @details This interface has only pure virtual functions.
+ */
 class ICharacter {
  public:
   virtual ~ICharacter(void) {}

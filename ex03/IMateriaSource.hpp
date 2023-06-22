@@ -17,6 +17,10 @@
 # include "AMateria.hpp"
 # include "font.hpp"
 
+/**
+ * @brief MateriaSource interface.
+ * @details This interface has only pure virtual functions.
+ */
 class IMateriaSource {
  public:
   virtual ~IMateriaSource() {}
