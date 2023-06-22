@@ -14,21 +14,21 @@
 
 Character::Character(void) {
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character Constructor called" << std::endl;
+            << "constructor called" << std::endl;
   for (int i = 0; i < SLOT_MAX; i++)
     this->_inventory[i] = NULL;
 }
 
 Character::Character(const Character &other) {
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character Copy Constructor called" << std::endl;
+            << "copy constructor called" << std::endl;
   if (this != &other)
     *this = other;
 }
 
 Character::Character(const std::string &name) {
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character Constructor called" << std::endl;
+            << "parameterised constructor called" << std::endl;
   this->_name = name;
   for (int i = 0; i < SLOT_MAX; i++)
     this->_inventory[i] = NULL;
@@ -36,7 +36,7 @@ Character::Character(const std::string &name) {
 
 Character &Character::operator=(const Character &other) {
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character Assignation Operator called" << std::endl;
+            << "assignation operator called" << std::endl;
   this->_name = other._name;
   for (int i = 0; i < SLOT_MAX; i++) {
     if (this->_inventory[i] != NULL)
@@ -48,7 +48,7 @@ Character &Character::operator=(const Character &other) {
 
 Character::~Character(void) {
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character Destructor called" << std::endl;
+            << "destructor called" << std::endl;
 }
 
 /**
@@ -65,7 +65,7 @@ std::string const &Character::getName(void) const {
  */
 void Character::equip(AMateria *materia) {
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character equip called" << std::endl;
+            << this->_name << " equips " << materia->getType() << std::endl;
   for (int i = 0; i < SLOT_MAX; i++) {
     if (this->_inventory[i] == NULL) {
       this->_inventory[i] = materia;
@@ -73,7 +73,7 @@ void Character::equip(AMateria *materia) {
     }
   }
   std::cout << F_RED << "[ Character ] " << FB_DEFAULT
-            << "Your inventory is full!" << std::endl;
+            << this->_name << "'s inventory is full!" << std::endl;
 }
 
 /**
@@ -81,13 +81,19 @@ void Character::equip(AMateria *materia) {
  * @param idx
  */
 void Character::unequip(int idx) {
+  if (idx < 0 || idx > 3) {
+    std::cout << F_RED << "[ Character ] " << FB_DEFAULT
+              << "index out of range" << std::endl;
+    return;
+  }
   if (this->_inventory[idx] == NULL) {
     std::cout << F_RED << "[ Character ] " << FB_DEFAULT
-              << "The inventory slot is empty!" << std::endl;
+              << this->_name << "'s inventory slot is empty!" << std::endl;
     return;
   }
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character unequip called" << std::endl;
+            << this->_name << "unequips"
+            << this->_inventory[idx]->getType() << std::endl;
   this->_inventory[idx] = NULL;
 }
 
@@ -97,12 +103,18 @@ void Character::unequip(int idx) {
  * @param target
  */
 void Character::use(int idx, ICharacter &target) {
+  if (idx < 0 || idx > 3) {
+    std::cout << F_RED << "[ Character ] " << FB_DEFAULT
+              << "index out of range" << std::endl;
+    return;
+  }
   if (this->_inventory[idx] == NULL) {
     std::cout << F_RED << "[ Character ] " << FB_DEFAULT
               << "You can not use nothing!" << std::endl;
     return;
   }
   std::cout << F_YELLOW << "[ Character ] " << FB_DEFAULT
-            << "Character use called" << std::endl;
+            << this->_name << " use "
+            << this->_inventory[idx]->getType() << std::endl;
   this->_inventory[idx]->use(target);
 }

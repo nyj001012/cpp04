@@ -14,27 +14,27 @@
 
 Cure::Cure(void) {
   std::cout << F_MAGENTA << "[ Cure ] " << FB_DEFAULT
-            << "Cure Constructor called" << std::endl;
+            << "default constructor called" << std::endl;
   this->_type = "cure";
 }
 
 Cure::Cure(const Cure &other) {
   std::cout << F_MAGENTA << "[ Cure ] " << FB_DEFAULT
-            << "Cure Copy Constructor called" << std::endl;
+            << "copy constructor called" << std::endl;
   if (this != &other)
     *this = other;
 }
 
 Cure &Cure::operator=(const Cure &other) {
   std::cout << F_MAGENTA << "[ Cure ] " << FB_DEFAULT
-            << "Cure Assignation Operator called" << std::endl;
+            << "assignation operator called" << std::endl;
   this->_type = other._type;
   return (*this);
 }
 
 Cure::~Cure(void) {
   std::cout << F_MAGENTA << "[ Cure ] " << FB_DEFAULT
-            << "Cure Destructor called" << std::endl;
+            << "destructor called" << std::endl;
 }
 
 /**
@@ -52,6 +52,6 @@ void Cure::use(ICharacter &target) {
  */
 AMateria *Cure::clone() const {
   std::cout << F_MAGENTA << "[ Cure ] " << FB_DEFAULT
-            << "Cure Clone called" << std::endl;
+            << "clone called" << std::endl;
   return (new Cure());
 }

@@ -14,19 +14,19 @@
 
 MateriaSource::MateriaSource(void) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
-            << "MateriaSource Constructor called" << std::endl;
+            << "default constructor called" << std::endl;
 }
 
 MateriaSource::MateriaSource(const MateriaSource &other) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
-            << "MateriaSource Copy Constructor called" << std::endl;
+            << "copy constructor called" << std::endl;
   if (this != &other)
     *this = other;
 }
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &other) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
-            << "MateriaSource Assignation Operator called" << std::endl;
+            << "assignation operator called" << std::endl;
   for (int i = 0; i < 4; i++) {
     if (this->_materia[i] != NULL)
       delete this->_materia[i];
@@ -37,7 +37,7 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &other) {
 
 MateriaSource::~MateriaSource(void) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
-            << "MateriaSource Destructor called" << std::endl;
+            << "destructor called" << std::endl;
 }
 
 /**
@@ -46,7 +46,7 @@ MateriaSource::~MateriaSource(void) {
  */
 void MateriaSource::learnMateria(AMateria *materia) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
-            << "MateriaSource learnMateria called" << std::endl;
+            << "learn " << materia->getType() << std::endl;
   int i = 0;
   while (this->_materia[i] != NULL)
     i++;
@@ -60,7 +60,7 @@ void MateriaSource::learnMateria(AMateria *materia) {
  */
 AMateria *MateriaSource::createMateria(std::string const &type) {
   std::cout << F_GREEN << "[ MateriaSource ] " << FB_DEFAULT
-            << "MateriaSource createMateria called" << std::endl;
+            << "create Materia: " << type << std::endl;
   int i = 0;
   while (this->_materia[i] != NULL) {
     if (this->_materia[i]->getType() == type)
