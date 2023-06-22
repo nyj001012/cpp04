@@ -28,7 +28,6 @@ int main(void) {
   ICharacter *bob = new Character("bob");
   me->use(0, *bob);
   me->use(1, *bob);
-  std::cout << std::endl;
   delete bob;
   delete me;
   delete src;
