@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:25:27 by yena              #+#    #+#             */
-/*   Updated: 2023/06/22 13:26:27 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:34:37 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ Cat &Cat::operator=(const Cat &other) {
 }
 
 Cat::~Cat(void) {
-  std::cout << "Cat Destructor called" << std::endl;
   delete brain;
+  std::cout << "Cat Destructor called" << std::endl;
 }
 
 /**
