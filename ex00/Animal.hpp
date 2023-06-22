@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:03:10 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:38:21 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:46:52 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CPP04_ANIMAL_HPP
 
 # include <iostream>
+# include "font.hpp"
 
 /**
  * @brief Animal class
@@ -22,7 +23,7 @@
  */
 class Animal {
  protected:
-  std::string type;
+  std::string _type;
 
  public:
   Animal(void);

@@ -6,35 +6,41 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:25:27 by yena              #+#    #+#             */
-/*   Updated: 2023/06/18 23:29:08 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:54:42 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat(void) {
-  std::cout << "Cat Constructor called" << std::endl;
-  this->type = "Cat";
+  std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
+            << "Cat Constructor called" << std::endl;
+  this->_type = "Cat";
 }
 
 Cat::Cat(const Cat &other) {
-  std::cout << "Cat Copy Constructor called" << std::endl;
-  *this = other;
+  std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
+            << "Cat Copy Constructor called" << std::endl;
+  if (this != &other)
+    *this = other;
 }
 
 Cat &Cat::operator=(const Cat &other) {
-  std::cout << "Cat Assignation Operator called" << std::endl;
-  this->type = other.type;
+  std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
+            << "Cat Assignation Operator called" << std::endl;
+  this->_type = other._type;
   return (*this);
 }
 
 Cat::~Cat(void) {
-  std::cout << "Cat Destructor called" << std::endl;
+  std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
+            << "Cat Destructor called" << std::endl;
 }
 
 /**
  * @brief Make sound of Cat
  */
 void Cat::makeSound(void) const {
-  std::cout << "Cat meows" << std::endl;
+  std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
+            << "Cat meows" << std::endl;
 }
