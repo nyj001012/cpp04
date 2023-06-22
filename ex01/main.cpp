@@ -6,14 +6,16 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:07:56 by yena              #+#    #+#             */
-/*   Updated: 2023/06/21 20:00:44 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:45:32 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "font.hpp"
 #include "Animal.hpp"
+#include "WrongAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 
 /**
  * @brief Basic test
@@ -22,12 +24,10 @@
 void basicTest(void) {
   std::cout << F_GREEN << "Basic Test" << FB_DEFAULT << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
-  const Animal *j = new Dog();
-  const Animal *i = new Cat();
+  const WrongAnimal *j = new WrongCat();
   std::cout << std::endl;
   std::cout << "===================== Destructor ======================" << std::endl;
   delete j;
-  delete i;
   std::cout << std::endl;
 }
 
@@ -64,6 +64,10 @@ void functionTest(Animal *farm[10]) {
   for (int i = 0; i < 10; i++) {
     farm[i]->makeSound();
   }
+  std::cout << "====================== Wrong Cat ======================" << std::endl;
+  WrongAnimal *w_cat = new WrongCat();
+  w_cat->makeSound();
+  delete w_cat;
   std::cout << "======================== Brain ========================" << std::endl;
   Cat *cat = static_cast<Cat *>(farm[0]);
   Dog *dog = static_cast<Dog *>(farm[5]);
