@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:07:56 by yena              #+#    #+#             */
-/*   Updated: 2023/06/22 13:31:37 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 13:33:29 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@
 void basicTest(void) {
   std::cout << F_GREEN << "Basic Test" << FB_DEFAULT << std::endl;
   std::cout << "===================== Constructor =====================" << std::endl;
-  // Abstract class can't be instantiated
-//  const AAnimal *j = new Dog();
-//  const AAnimal *i = new Cat();
+  const AAnimal *j = new Dog();
+  const AAnimal *i = new Cat();
   std::cout << std::endl;
   std::cout << "===================== Destructor ======================" << std::endl;
-//  delete j;
-//  delete i;
+  delete j;
+  delete i;
   std::cout << std::endl;
 }
 
@@ -93,6 +92,8 @@ void destroyFarm(AAnimal *farm[10]) {
 }
 
 int main(void) {
+//  // Abstract class can't be instantiated
+//  AAnimal *animal = new AAnimal();
   basicTest();
   AAnimal *(farm[10]);
   createFarm(farm);
