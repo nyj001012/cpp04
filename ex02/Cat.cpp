@@ -26,12 +26,12 @@ Cat::Cat(const Cat &other) {
 Cat &Cat::operator=(const Cat &other) {
   std::cout << "Cat Assignation Operator called" << std::endl;
   this->type = other.type;
-  this->brain = new Brain(*other.brain);
+  this->_brain = new Brain(*other._brain);
   return (*this);
 }
 
 Cat::~Cat(void) {
-  delete brain;
+  delete _brain;
   std::cout << "Cat Destructor called" << std::endl;
 }
 
@@ -47,9 +47,9 @@ std::string Cat::getType() const {
 }
 
 std::string Cat::getIdea(int idx) const {
-  return (this->brain->getIdea(idx));
+  return (this->_brain->getIdea(idx));
 }
 
 void Cat::setIdea(int idx, std::string idea) {
-  this->brain->setIdea(idx, idea);
+  this->_brain->setIdea(idx, idea);
 }

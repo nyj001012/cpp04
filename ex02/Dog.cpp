@@ -30,7 +30,7 @@ Dog &Dog::operator=(const Dog &other) {
 }
 
 Dog::~Dog(void) {
-  delete brain;
+  delete _brain;
   std::cout << "Dog Destructor called" << std::endl;
 }
 
@@ -46,9 +46,9 @@ std::string Dog::getType(void) const {
 }
 
 std::string Dog::getIdea(int idx) const {
-  return (this->brain->getIdea(idx));
+  return (this->_brain->getIdea(idx));
 }
 
 void Dog::setIdea(int idx, std::string idea) {
-  this->brain->setIdea(idx, idea);
+  this->_brain->setIdea(idx, idea);
 }

@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:30:39 by yena              #+#    #+#             */
-/*   Updated: 2023/06/19 00:34:18 by yena             ###   ########.fr       */
+/*   Updated: 2023/06/22 14:02:56 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  */
 class Dog : public Animal {
  private:
-  Brain *brain;
+  Brain *_brain;
 
  public:
   Dog(void);
