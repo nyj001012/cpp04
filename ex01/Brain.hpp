@@ -14,6 +14,7 @@
 #define CPP04_EX01_BRAIN_HPP_
 
 # include <iostream>
+# include "font.hpp"
 
 class Brain {
  private:

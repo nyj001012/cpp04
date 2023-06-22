@@ -16,6 +16,7 @@ Dog::Dog(void) : Animal() {
   std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
             << "Dog Constructor called" << std::endl;
   this->_type = "Dog";
+  this->_brain = new Brain();
 }
 
 Dog::Dog(const Dog &other) {
@@ -29,10 +30,12 @@ Dog &Dog::operator=(const Dog &other) {
   std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
             << "Dog Assignation Operator called" << std::endl;
   this->_type = other._type;
+  this->_brain = other._brain;
   return (*this);
 }
 
 Dog::~Dog(void) {
+  delete this->_brain;
   std::cout << F_CYAN << "[ Dog ] " << FB_DEFAULT
             << "Dog Destructor called" << std::endl;
 }

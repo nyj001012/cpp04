@@ -18,20 +18,6 @@
 #include "WrongCat.hpp"
 
 /**
- * @brief Basic test
- * @details This test is for checking basic constructor, destructor
- */
-void basicTest(void) {
-  std::cout << F_GREEN << "Basic Test" << FB_DEFAULT << std::endl;
-  std::cout << "===================== Constructor =====================" << std::endl;
-  const WrongAnimal *j = new WrongCat();
-  std::cout << std::endl;
-  std::cout << "===================== Destructor ======================" << std::endl;
-  delete j;
-  std::cout << std::endl;
-}
-
-/**
  * @brief Create farm
  * @details This function creates farm
  * @return Animal** farm
@@ -99,7 +85,6 @@ void destroyFarm(Animal *farm[10]) {
 }
 
 int main(void) {
-  basicTest();
   Animal **farm = createFarm();
   functionTest(farm);
   destroyFarm(farm);

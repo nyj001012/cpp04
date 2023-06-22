@@ -16,6 +16,7 @@ Cat::Cat(void) {
   std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
             << "Cat Constructor called" << std::endl;
   this->_type = "Cat";
+  this->_brain = new Brain();
 }
 
 Cat::Cat(const Cat &other) {
@@ -29,10 +30,12 @@ Cat &Cat::operator=(const Cat &other) {
   std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
             << "Cat Assignation Operator called" << std::endl;
   this->_type = other._type;
+  this->_brain = other._brain;
   return (*this);
 }
 
 Cat::~Cat(void) {
+  delete this->_brain;
   std::cout << F_BLUE << "[ Cat ] " << FB_DEFAULT
             << "Cat Destructor called" << std::endl;
 }
